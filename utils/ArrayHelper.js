@@ -1,3 +1,10 @@
+const filterEvenNumbers = function (value, index, array) {
+    return value % 2 === 0;
+}
+
+const filterOddNumbers = function (value, index, array) {
+    return value % 2 !== 0;
+}
 function filterGreater3Number(value, index, array) {
     console.log("Processing at index", index);
     return value > 3;
@@ -20,6 +27,8 @@ function sortNumberDESC(firstNum, secondNum) {
 }
 
 module.exports = {
+    filterEvenNumbers: filterEvenNumbers,
+    filterOddNumbers: filterOddNumbers,
     sortNumberASC: sortNumberASC,
     sortNumberDESC: sortNumberDESC ,
     convertToEvenNumbers: convertToEvenNumbers,
