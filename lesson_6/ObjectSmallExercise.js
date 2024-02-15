@@ -19,6 +19,7 @@ teo.grades = [6, 7, 9];
 const students = [ti, teo, tun];
 const bestStudent = findBestStudent(students);
 console.log('the best student is ', bestStudent)
+
 function findBestStudent(students) {
     let currentHighestScore = 0;
     let bestStudent = undefined;
@@ -33,6 +34,7 @@ function findBestStudent(students) {
     }
     return bestStudent
 }
+
 function calculateAvarageScore(student) {
     const studentGrades = student.grades;
     console.log("vao2", studentGrades)
@@ -42,5 +44,5 @@ function calculateAvarageScore(student) {
     for (const grade of studentGrades) {
         totalGrade = totalGrade + grade;
     }
-    return Math.floor(totalGrade / scoreLength);
+    return (totalGrade / scoreLength);
 }
