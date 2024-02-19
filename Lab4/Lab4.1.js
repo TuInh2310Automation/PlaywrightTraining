@@ -8,6 +8,8 @@ let bankAccountMain = {
 
 let bankAccount2nd = JSON.parse(JSON.stringify(bankAccountMain));
 bankAccount2nd.balance = 99999999999999;
+bankAccount2nd.accountNumber = "68686868";
+console.log(bankAccount2nd);
 let bankAccounts = [bankAccountMain, bankAccount2nd];
 
 let isUsingBakingApp = true;
@@ -47,7 +49,9 @@ function findAnAccount(accountNumber) {
 }
 
 function updateBalance(money) {
-    if(money > bankAccountMain.balance){
+    if (money <=0) {
+        console.log('user do take negative or zero money');
+    }else if(money > bankAccountMain.balance){
         console.log('user to take more than current balance');
     } else {
         bankAccountMain.balance = bankAccountMain.balance - money;
