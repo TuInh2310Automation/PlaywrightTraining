@@ -20,7 +20,7 @@ function sendRequest(url, callback){
 }
 // Synchronos
 function processResponse(response){
-    console.log('2. processing response ', response);
+    console.log('2. processing response ', 'response');
     return response.status;
 }
 
@@ -33,9 +33,10 @@ function validateResponse(statusCode) {
         console.error('Fail, status code ', statusCode);
     }
 }
-const targetURL = "https://sdetpro.com/"
+const targetURL = "https://jsonplaceholder.typicode.com/todos/1"
 async function run() {
     const response = await fetch(targetURL);
-    console.log((await response).body);
+    const jsonResult = await response.json();
+    console.log(jsonResult);
 }
 run();
