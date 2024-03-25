@@ -9,5 +9,11 @@ class Employee {
     set salary(salary){
         return this._salary = salary;
     }
+
+    _validateSalary(salary){
+        if(salary<=0) {
+            throw new Error("Salary must be greater than 0")
+        }
+    }
 }
-module.exports = Person
+module.exports = Employee
